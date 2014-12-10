@@ -1,0 +1,30 @@
+{
+  "name": "web-storage",
+  "main": "web-storage.js",
+  "version": "0.0.0",
+  "description": "Making it easier to interact with Web Storage.",
+  "author": "Joseph Spencer",
+  "scripts": {
+    "pretest": "jshint web-storage.js && jshint --config ./test/.jshintrc test",
+    "cover": "istanbul cover _mocha -- ./test/**/*.specs.js && cat ./coverage/lcov.info | coveralls -v && rm -rf coverage",
+    "test": "mocha ./test/**/*.specs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsdevel/node-web-storage.git"
+  },
+  "keywords": [],
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsdevel/node-web-storage/issues"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.5",
+    "jshint": "^2.5.10",
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {}
+}
