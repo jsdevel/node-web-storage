@@ -1,6 +1,42 @@
 # web-storage [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 > Making it easier to interact with Web Storage.
 
+## Highlights
+* Minimal wrapper around `localStorage` and `sessionStorage`.  Small footprint.
+* Getter/Setter based.
+* You can forget about seralization errors.
+* You can use it with any framework.
+* Provides in-memory storage if `localStorage` or `sessionStorage` aren't available.
+* CommonJS format.  Really easy to use with browserify.
+* You can configure the seralization methods, I.E. `parse` and `stringify`, in the config.
+
+## Dealing with some data
+
+```javascript
+var localStorage = require('web-storage')().localStorage;
+var circular = {};
+circular.circular = circular;
+
+//window.localStorage.foo = JSON.stringify(circular);//This throws errors
+localStorage.set('foo', circular);//Returns false, unsuccessful
+localStorage.get('foo');//Returns undefined
+
+localStorage.set('boo', 5);//returns true, successful
+localStorage.get('boo');//returns 5;
+localStorage.remove('boo');
+localStorage.get('boo');//returns undefined;
+```
+
+## Custom serialization
+```javascript
+var localStorage = require('web-storage')({
+    parse: function() {return 'idk';}
+  }).localStorage;
+
+localStorage.set('foo', 5);
+window.localStorage.foo;//equals 'idk'
+```
+
 ##LICENSE
 ``````
 The MIT License (MIT)
