@@ -30,8 +30,8 @@ THE SOFTWARE.
 [npm-url]: https://npmjs.org/package/web-storage
 [npm-image]: http://img.shields.io/npm/v/web-storage.svg
 
-[travis-url]: https://travis-ci.org/jsdevel/web-storage
-[travis-image]: http://img.shields.io/travis/jsdevel/web-storage.svg
+[travis-url]: https://travis-ci.org/jsdevel/node-web-storage
+[travis-image]: http://img.shields.io/travis/jsdevel/node-web-storage.svg
 
-[coveralls-url]: https://coveralls.io/r/jsdevel/web-storage
-[coveralls-image]: http://img.shields.io/coveralls/jsdevel/web-storage/master.svg
+[coveralls-url]: https://coveralls.io/r/jsdevel/node-web-storage
+[coveralls-image]: http://img.shields.io/coveralls/jsdevel/node-web-storage/master.svg
